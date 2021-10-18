@@ -4,10 +4,13 @@ import * as S from './navbar.styles';
 export default function Navbar() {
   return (
     <S.Navbar>
-      This is the Navbar.{' '}
-      <Link href='/'>
-        <a>Return Home</a>
-      </Link>
+      <S.Wrapper>
+        <S.Link>
+          <Link href='/'>
+            Home
+          </Link>
+        </S.Link>
+      </S.Wrapper>
     </S.Navbar>
   );
 };
