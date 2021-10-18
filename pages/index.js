@@ -18,10 +18,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      <footer>
-        Created by <a href='https://github.com/Cosze'>me</a>
-      </footer>
     </div>
   )
 };
