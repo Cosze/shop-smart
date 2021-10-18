@@ -17,6 +17,11 @@ export default function Home() {
             <a>View Product</a>
           </Link>
         </div>
+        <div>
+          <Link href='/products/3'>
+            <a>Viewing Product 3</a>
+          </Link>
+        </div>
       </main>
     </div>
   )
