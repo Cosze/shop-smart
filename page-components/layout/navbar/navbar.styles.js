@@ -23,3 +23,8 @@ export const Link = styled.div`
     color: white;
   }
 `;
+
+export const LogoContainer = styled.div`
+  width: 25px;
+  height: 25px;
+`;
