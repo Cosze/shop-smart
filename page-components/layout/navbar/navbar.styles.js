@@ -15,12 +15,9 @@ export const Wrapper = styled.div`
   width: 70%;
 `;
 
-export const Link = styled.div`
-  color: #ECECEC;
-  transition: color 0.3s;
-
+export const Logo = styled.div`
   &:hover {
-    color: white;
+    cursor: pointer;
   }
 `;
 

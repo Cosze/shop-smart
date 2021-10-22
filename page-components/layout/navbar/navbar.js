@@ -8,8 +8,15 @@ export default function Navbar() {
   return (
     <S.Navbar>
       <S.Wrapper>
-        <Image src={siteLogo} alt='logo' width={25} height={25}/>
-        <NavEle name='Home' />
+        <S.Logo>
+          <Link href='/'>
+            <Image src={siteLogo} alt='logo' width={25} height={25}/>
+          </Link>
+        </S.Logo>
+        <NavEle name='home' />
+        <NavEle name='about' />
+        <NavEle name='favorites' />
+        <NavEle name='cart' />
       </S.Wrapper>
     </S.Navbar>
   );
