@@ -9,7 +9,7 @@ export default function Navbar() {
     <S.Navbar>
       <S.Wrapper>
         <S.Logo>
-          <Link href='/'>
+          <Link href='/' passHref>
             <Image src={siteLogo} alt='logo' width={25} height={25}/>
           </Link>
         </S.Logo>
