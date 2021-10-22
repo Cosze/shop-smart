@@ -11,7 +11,7 @@ export const Navbar = styled.header`
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 70%;
 `;
 
@@ -24,7 +24,3 @@ export const Link = styled.div`
   }
 `;
 
-export const LogoContainer = styled.div`
-  width: 25px;
-  height: 25px;
-`;
