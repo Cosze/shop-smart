@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import siteLogo from '../../../public/images/logoWhite.png';
+import NavEle from './navEle';
 import * as S from './navbar.styles';
 
 export default function Navbar() {
@@ -8,11 +9,7 @@ export default function Navbar() {
     <S.Navbar>
       <S.Wrapper>
         <Image src={siteLogo} alt='logo' width={25} height={25}/>
-        <S.Link>
-          <Link href='/'>
-            Home
-          </Link>
-        </S.Link>
+        <NavEle name='Home' />
       </S.Wrapper>
     </S.Navbar>
   );
