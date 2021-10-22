@@ -4,17 +4,19 @@ export const Navbar = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: gray;
-  height: 50px;
+  align-items: center;
+  background-color: #3E3E3E;
+  height: 60px;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 70%;
 `;
 
 export const Link = styled.div`
-  font-weight: 700;
+  color: #ECECEC;
   transition: color 0.3s;
 
   &:hover {
