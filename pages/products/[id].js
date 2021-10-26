@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Overview from '../../page-components/overview';
 import Qa from '../../page-components/qa';
 import Related from '../../page-components/related';
@@ -19,4 +20,4 @@ export default function Product() {
       <Reviews />
     </Page>
   );
-};
+}

@@ -1,28 +1,46 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Head from 'next/head';
-import Link from 'next/link';
+import ProductCard from '../page-components/productCard';
 
-export default function Home() {
+const mapProducts = ({products}) => {
+  if (products) {
+    return products.map((product, index) => {
+      return (
+        <ProductCard
+          product={product}
+          key={index}
+        />
+      );
+    })
+  }
+};
+
+export default function Home(props) {
   return (
     <div>
       <Head>
         <title>ShopSmart App Home Page</title>
       </Head>
-
       <main>
         <h1>
-          ShopSmart App Home Page
+          ShopSmart App
         </h1>
-        <div>
-          <Link href='/products'>
-            <a>View Product</a>
-          </Link>
-        </div>
-        <div>
-          <Link href='/products/3'>
-            <a>Viewing Product 3</a>
-          </Link>
-        </div>
+      {mapProducts(props)}
       </main>
     </div>
   )
-};
+}
+
+export async function getStaticProps() {
+  const response = await fetch('https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/products', {
+    headers: {
+      'Authorization': process.env.API_KEY,
+    }
+  });
+  const products = await response.json();
+  return {
+    props: {
+      products,
+    }
+  };
+}
