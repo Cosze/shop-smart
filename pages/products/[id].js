@@ -21,3 +21,32 @@ export default function Product() {
     </Page>
   );
 }
+
+
+export async function getStaticPaths() {
+  return {
+    fallback: true,
+    paths: [
+      {
+        params: {
+          id: '12412',
+        },
+      },
+      {
+        params: {
+          id: '12312',
+        },
+      },
+    ]
+  }
+}
+
+export async function getStaticProps(context) {
+  const product_id = context.params.id;
+  console.log(product_id);
+  // fetch product info
+  return {
+    props: {},
+    revalidate: 600,
+  };
+}
