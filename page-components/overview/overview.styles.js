@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Main = styled.div`
   position: relative;
   width: 70%;
+  border: 1px solid black;
   display: flex;
   justify-content: space-between;
 `;
@@ -18,4 +19,8 @@ export const InfoContainer = styled.div`
 
 export const Wrapper = styled.div`
   margin-bottom: 2em;
+`;
+
+export const Info = styled.p`
+  color: black;
 `;

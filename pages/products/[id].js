@@ -11,10 +11,10 @@ const Page = styled.div`
   align-items: center;
 `;
 
-export default function Product() {
+export default function Product(props) {
   return (
     <Page>
-      <Overview />
+      <Overview product={props?.product} styles={props?.styles} />
       <Qa />
       <Related />
       <Reviews />
@@ -29,12 +29,27 @@ export async function getStaticPaths() {
     paths: [
       {
         params: {
-          id: '12412',
+          id: '48432',
         },
       },
       {
         params: {
-          id: '12312',
+          id: '48433',
+        },
+      },
+      {
+        params: {
+          id: '48434',
+        },
+      },
+      {
+        params: {
+          id: '48435',
+        },
+      },
+      {
+        params: {
+          id: '48436',
         },
       },
     ]
@@ -43,10 +58,24 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const product_id = context.params.id;
-  console.log(product_id);
   // fetch product info
+  const fetchProduct = await fetch(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/products/${product_id}`, {
+    headers: {
+      'Authorization': process.env.API_KEY,
+    }
+  });
+  const product = await fetchProduct.json();
+  const fetchStyles = await fetch(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/products/${product_id}/styles`, {
+    headers: {
+      'Authorization': process.env.API_KEY,
+    }
+  });
+  const styles = await fetchStyles.json();
   return {
-    props: {},
+    props: {
+      product,
+      styles: styles.results,
+    },
     revalidate: 600,
   };
 }
