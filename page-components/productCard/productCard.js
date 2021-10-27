@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import * as S from './productCard.styles';
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, featured }) {
   return (
-    <div>
+    <S.Card featured={featured}>
       <Link href={`/products/${product?.id}`}>{product?.name}</Link>
       <p>{product?.description}</p>
-    </div>
+    </S.Card>
   );
 }
