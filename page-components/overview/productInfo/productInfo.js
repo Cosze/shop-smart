@@ -4,7 +4,7 @@ export default function ProductInfo({ product, styles }) {
   return (
     <S.Main>
       <S.Info>{product?.category}</S.Info>
-      <S.Info>{product?.name}</S.Info>
+      <S.Name>{product?.name}</S.Name>
       {/* ratings */}
       {/* pricing */}
       {/* style name */}
@@ -12,12 +12,12 @@ export default function ProductInfo({ product, styles }) {
       {/* size name */}
       {/* size selectors */}
       {/* ADD TO BAG */}
-      <S.Info>{product?.slogan}</S.Info>
+      <S.Bold>{product?.slogan}</S.Bold>
       <S.Info>{product?.description}</S.Info>
-      <S.Info>Product Features</S.Info>
-      <ul>
+      <S.Bold>Product Features</S.Bold>
+      <S.Features>
         {product?.features.map((feature, index) => <li key={index}>{feature.value + ' ' + feature.feature}</li>)}
-      </ul>
+      </S.Features>
     </S.Main>
   );
 }
