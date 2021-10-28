@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div``;
+
 export const Paragraph = styled.p`
   margin: 0;
   margin-top: 0.5em;
