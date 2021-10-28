@@ -1,5 +1,6 @@
 import * as S from './productInfo.styles';
 import Description from './description';
+import Features from './features';
 
 export default function ProductInfo({ product, styles }) {
   return (
@@ -14,10 +15,7 @@ export default function ProductInfo({ product, styles }) {
       {/* size selectors */}
       {/* ADD TO BAG */}
       <Description product={product} />
-      <S.Bold>Product Features</S.Bold>
-      <S.Features>
-        {product?.features.map((feature, index) => <li key={index}>{feature.value + ' ' + feature.feature}</li>)}
-      </S.Features>
+      <Features product={product} />
     </S.Main>
   );
 }
