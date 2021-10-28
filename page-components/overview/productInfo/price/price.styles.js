@@ -9,5 +9,5 @@ export const Price = styled.span`
 
 export const OldPrice = styled.s`
   text-decoration: line-through;
-  margin-left: 1em;
+  margin-left: 0.7em;
 `;
