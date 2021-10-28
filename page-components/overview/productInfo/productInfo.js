@@ -1,4 +1,5 @@
 import * as S from './productInfo.styles';
+import Description from './description';
 
 export default function ProductInfo({ product, styles }) {
   return (
@@ -12,8 +13,7 @@ export default function ProductInfo({ product, styles }) {
       {/* size name */}
       {/* size selectors */}
       {/* ADD TO BAG */}
-      <S.Bold>{product?.slogan}</S.Bold>
-      <S.Info>{product?.description}</S.Info>
+      <Description product={product} />
       <S.Bold>Product Features</S.Bold>
       <S.Features>
         {product?.features.map((feature, index) => <li key={index}>{feature.value + ' ' + feature.feature}</li>)}

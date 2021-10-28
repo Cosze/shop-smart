@@ -1,7 +1,10 @@
 import * as S from './description.styles';
 
-export default function Description() {
+export default function Description({ product }) {
   return (
-    <div>Description</div>
+    <>
+      <S.Header>{product?.slogan}</S.Header>
+      <S.Paragraph>{product?.description}</S.Paragraph>
+    </>
   );
 }
