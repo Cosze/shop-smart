@@ -16,11 +16,3 @@ export const ImageContainer = styled.div`
 export const InfoContainer = styled.div`
   width: 50%;
 `;
-
-export const Wrapper = styled.div`
-  margin-bottom: 2em;
-`;
-
-export const Info = styled.p`
-  color: black;
-`;
