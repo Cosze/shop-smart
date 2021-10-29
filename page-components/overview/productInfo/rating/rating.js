@@ -8,7 +8,7 @@ export default function Rating({rating}) {
       uncolored: null,
     };
     if (!(type in valid)) return null;
-    const color = type === 'colored' ? '#1c1c1c' : '#727272';
+    const color = type === 'colored' ? '#1c1c1c' : '#999';
     return [1, 2, 3, 4, 5].map(num => (
       <S.Star key={num}>
         <FaStar style={{color}}/>
