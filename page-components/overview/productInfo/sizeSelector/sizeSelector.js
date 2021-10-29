@@ -2,24 +2,35 @@ import * as S from './sizeSelector.styles';
 import { useState } from 'react';
 
 export default function SizeSelector({ skus }) {
-  const [size, setSize] = useState();
+  const arrayOfSkus = skus && Object.keys(skus);
+  const [size, setSize] = useState(arrayOfSkus?.[0]);
+
+  const handleClick = (e) => {
+    const sku = e.target.getAttribute('data-sku');
+    setSize(sku);
+  };
+
+  const generateSizeBoxes = skus => {
+    return arrayOfSkus?.map(sku_id => {
+      return <S.Size key={sku_id} data-sku={sku_id}  onClick={handleClick} current={sku_id === size}>{skus[sku_id]['size']}</S.Size>;
+    });
+  };
 
   return (
-    <S.Wrapper className='size-selector'>
-      <div>
-        <S.Text>Size</S.Text>
-        <S.Number>2</S.Number>
-      </div>
-      <S.Grid>
-        <S.Size>1</S.Size>
-        <S.Size>1.5</S.Size>
-        <S.Size current>2</S.Size>
-        <S.Size>2.5</S.Size>
-        <S.Size>3</S.Size>
-        <S.Size>3.5</S.Size>
-        <S.Size>4</S.Size>
-        <S.Size>14.5</S.Size>
-      </S.Grid>
-    </S.Wrapper>
+    <>
+      {
+        size !== 'null' ? (
+          <S.Wrapper className='size-selector'>
+            <div>
+              <S.Text>Size</S.Text>
+              <S.Value>{skus?.[size]['size']}</S.Value>
+            </div>
+            <S.Grid>
+              {generateSizeBoxes(skus)}
+            </S.Grid>
+          </S.Wrapper>
+        ) : null
+      }
+    </>
   );
 }

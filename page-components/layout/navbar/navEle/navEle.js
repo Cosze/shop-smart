@@ -8,7 +8,7 @@ function capitalize(string) {
 export default function NavEle({name}) {
   return (
     <S.Link>
-      <Link href={name === 'home' ? '/' : name}>
+      <Link href={name === 'home' ? '/' : `/${name}`}>
         {capitalize(name)}
       </Link>
     </S.Link>

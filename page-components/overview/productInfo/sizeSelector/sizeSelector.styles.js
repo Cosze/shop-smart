@@ -7,7 +7,7 @@ export const Text = styled.span`
   margin-right: 0.7em;
 `;
 
-export const Number = styled.span``;
+export const Value = styled.span``;
 
 export const Grid = styled.div`
   margin-top: 0.5em;
