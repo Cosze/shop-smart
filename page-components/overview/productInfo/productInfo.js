@@ -1,4 +1,5 @@
 import * as S from './productInfo.styles';
+import AddToBag from './addToBag';
 import Description from './description';
 import Features from './features';
 import Price from './price';
@@ -14,7 +15,7 @@ export default function ProductInfo({ product, styles }) {
       <Price style={styles?.[2]}/>
       {/* style selectors */}
       <SizeSelector skus={styles?.[2]['skus']} />
-      {/* ADD TO BAG */}
+      <AddToBag />
       <Description product={product} />
       <Features product={product} />
     </S.Main>
