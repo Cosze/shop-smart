@@ -2,6 +2,7 @@ import * as S from './productInfo.styles';
 import Description from './description';
 import Features from './features';
 import Price from './price';
+import Rating from'./rating';
 import SizeSelector from './sizeSelector';
 
 export default function ProductInfo({ product, styles }) {
@@ -9,10 +10,9 @@ export default function ProductInfo({ product, styles }) {
     <S.Main>
       <S.Info>{product?.category}</S.Info>
       <S.Name>{product?.name}</S.Name>
-      {/* ratings */}
+      <Rating />
       <Price style={styles?.[2]}/>
       {/* style selectors */}
-      {/* size selectors */}
       <SizeSelector skus={styles?.[2]['skus']} />
       {/* ADD TO BAG */}
       <Description product={product} />
