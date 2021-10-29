@@ -5,6 +5,7 @@ import Features from './features';
 import Price from './price';
 import Rating from'./rating';
 import SizeSelector from './sizeSelector';
+import StyleSelector from './styleSelector';
 
 export default function ProductInfo({ product, styles }) {
   return (
@@ -13,7 +14,7 @@ export default function ProductInfo({ product, styles }) {
       <S.Name>{product?.name}</S.Name>
       <Rating rating='3.5'/>
       <Price style={styles?.[2]}/>
-      {/* style selectors */}
+      <StyleSelector />
       <SizeSelector skus={styles?.[2]['skus']} />
       <AddToBag />
       <Description product={product} />
