@@ -1,4 +1,5 @@
 import * as S from './overview.styles';
+import ImageGallery from './ImageGallery';
 import ProductInfo from './productInfo';
 
 export default function Overview({ product, styles }) {
@@ -10,4 +11,4 @@ export default function Overview({ product, styles }) {
       </S.InfoContainer>
     </S.Main>
   );
-};
+}
