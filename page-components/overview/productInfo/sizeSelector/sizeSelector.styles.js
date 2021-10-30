@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
   margin-bottom: 2em;
 `;
 
+export const TextWrapper = styled.div`
+  margin-bottom: 1em;
+`;
+
 export const Text = styled.span`
   font-weight: 500;
   margin-right: 0.7em;
@@ -14,7 +18,6 @@ export const Value = styled.span``;
 export const Grid = styled.div`
   margin-top: 0.5em;
   display: grid;
-  width: 410px;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 10px;

@@ -21,10 +21,10 @@ export default function SizeSelector({ skus }) {
       {
         size !== 'null' ? (
           <S.Wrapper className='size-selector'>
-            <div>
+            <S.TextWrapper>
               <S.Text>Size</S.Text>
               <S.Value>{skus?.[size]?.size}</S.Value>
-            </div>
+            </S.TextWrapper>
             <S.Grid>
               {generateSizeBoxes(skus)}
             </S.Grid>
