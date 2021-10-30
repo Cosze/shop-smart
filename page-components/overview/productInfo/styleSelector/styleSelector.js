@@ -12,10 +12,10 @@ export default function StyleSelector({ styles }) {
   };
 
   const generateStyles = () => {
-    return styles?.map(styleObj => {
+    return styles?.map((styleObj, index) => {
       const thumbnail_url = styleObj?.photos?.[0]?.thumbnail_url;
       return (
-        <S.ImageContainer className={`style-thumbnail ${styleObj === style ? 'current' : ''}`} onClick={handleClick(styleObj)}>
+        <S.ImageContainer className={`style-thumbnail ${styleObj === style ? 'current' : ''}`} onClick={handleClick(styleObj)} key={index}>
           {thumbnail_url &&
           <Image
             src={thumbnail_url}

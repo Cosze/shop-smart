@@ -31,7 +31,7 @@ export default function Rating({rating}) {
           {starGenerator('colored')}
         </S.ColoredStarContainer>
       </S.RatingContainer>
-      <S.Text>{~~rating * ~~(Math.random() * 100)} ratings</S.Text>
+      <S.Text>{rating * 100} ratings</S.Text>
     </S.Wrapper>
   );
 }

@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  width: 200px;
+  width: 300px;
   justify-content: space-between;
 `;
