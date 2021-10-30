@@ -1,5 +1,12 @@
+import * as S from './imageGallery.styles';
+import Carousel from './carousel';
+import Main from './main';
+
 export default function ImageGallery() {
   return (
-    <div>placeholder for image gallery</div>
+    <S.Wrapper className='image-gallery'>
+      <Main />
+      <Carousel />
+    </S.Wrapper>
   );
 }

@@ -5,7 +5,9 @@ import ProductInfo from './productInfo';
 export default function Overview({ product, styles }) {
   return (
     <S.Main>
-      <S.ImageContainer></S.ImageContainer>
+      <S.ImageContainer>
+        <ImageGallery />
+      </S.ImageContainer>
       <S.InfoContainer>
         <ProductInfo product={product} styles={styles}/>
       </S.InfoContainer>
