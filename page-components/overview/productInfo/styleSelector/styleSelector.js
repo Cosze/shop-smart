@@ -15,11 +15,12 @@ export default function StyleSelector({ styles }) {
     return styles?.map(styleObj => {
       const thumbnail_url = styleObj?.photos?.[0]?.thumbnail_url;
       return (
-        <S.ImageContainer onClick={handleClick(styleObj)}>
+        <S.ImageContainer className={`style-thumbnail ${styleObj === style ? 'current' : ''}`} onClick={handleClick(styleObj)}>
           {thumbnail_url &&
           <Image
             src={thumbnail_url}
             layout='fill'
+            objectFit='cover'
             objectPosition='center'
           />}
         </S.ImageContainer>

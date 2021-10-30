@@ -18,6 +18,7 @@ export const Grid = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  user-select: none;
   position: relative;
   width: 60px;
   height: 60px;

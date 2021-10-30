@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.style-thumbnail {
+  transition: opacity 0.2s;
+}
+
+.style-thumbnail:hover {
+  opacity: 0.3;
+}
+
+.current {
+  opacity: 0.3;
+}
