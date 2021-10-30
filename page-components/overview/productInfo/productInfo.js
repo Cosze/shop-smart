@@ -10,10 +10,12 @@ import StyleSelector from './styleSelector';
 export default function ProductInfo({ product, styles }) {
   return (
     <S.Main>
-      <S.Info>{product?.category}</S.Info>
-      <S.Name>{product?.name}</S.Name>
-      <Rating rating='3.5' />
-      <Price style={styles?.[2]} />
+      <S.Wrapper>
+        <S.Info>{product?.category}</S.Info>
+        <S.Name>{product?.name}</S.Name>
+        <Rating rating='3.5' />
+        <Price style={styles?.[2]} />
+      </S.Wrapper>
       <StyleSelector styles={styles} />
       <SizeSelector skus={styles?.[2]['skus']} />
       <AddToBag />
