@@ -30,10 +30,10 @@ export default function StyleSelector({ styles }) {
 
   return (
     <S.Wrapper className='style-selector'>
-      <div>
+      <S.TextWrapper>
         <S.Text>Style</S.Text>
         <S.Value>{style?.name}</S.Value>
-      </div>
+      </S.TextWrapper>
       <S.Grid>
         {generateStyles()}
       </S.Grid>
