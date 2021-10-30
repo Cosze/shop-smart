@@ -2,6 +2,8 @@ import * as S from './reviews.styles';
 
 export default function Reviews() {
     return (
-      <div>I am Reviews</div>
+      <S.Wrapper className='reviews'>
+        I am Reviews
+      </S.Wrapper>
     );
-  };
+  }

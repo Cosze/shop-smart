@@ -2,6 +2,8 @@ import * as S from './related.styles';
 
 export default function Related() {
     return (
-      <div>I am Related</div>
+      <S.Wrapper className='related-products'>
+        I am Related
+      </S.Wrapper>
     );
-  };
+  }

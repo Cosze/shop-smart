@@ -11,6 +11,8 @@ export const Main = styled.div`
 export const ImageContainer = styled.div`
   position: sticky;
   top: 0;
+  width: 50%;
+  height: max-content;
 `;
 
 export const InfoContainer = styled.div`
