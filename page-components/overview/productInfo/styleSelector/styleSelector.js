@@ -1,12 +1,44 @@
 import * as S from './styleSelector.styles';
+import { useState } from 'react';
+import Image from 'next/image';
 
-export default function StyleSelector() {
+export default function StyleSelector({ styles }) {
+  const [style, setStyle] = useState(styles?.[0]);
+
+  const handleClick = (style) => {
+    return () => {
+      setStyle(style);
+    }
+  };
+
+  const generateStyles = () => {
+    return styles?.map(styleObj => {
+      const thumbnail_url = styleObj?.photos?.[0]?.thumbnail_url;
+      return (
+        <S.ImageContainer onClick={handleClick(styleObj)}>
+          {thumbnail_url &&
+          <Image
+            src={thumbnail_url}
+            layout='fill'
+            objectPosition='center'
+          />}
+        </S.ImageContainer>
+      );
+    })
+  };
+
   return (
     <S.Wrapper className='style-selector'>
       <div>
         <S.Text>Style</S.Text>
-        <S.Value>White</S.Value>
+        <S.Value>{style?.name}</S.Value>
       </div>
+      <S.Grid>
+        {generateStyles()}
+      </S.Grid>
     </S.Wrapper>
   );
 }
+
+// TODO: fix image dimensions
+// images should load faster

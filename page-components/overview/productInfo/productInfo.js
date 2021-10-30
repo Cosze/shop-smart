@@ -12,9 +12,9 @@ export default function ProductInfo({ product, styles }) {
     <S.Main>
       <S.Info>{product?.category}</S.Info>
       <S.Name>{product?.name}</S.Name>
-      <Rating rating='3.5'/>
-      <Price style={styles?.[2]}/>
-      <StyleSelector />
+      <Rating rating='3.5' />
+      <Price style={styles?.[2]} />
+      <StyleSelector styles={styles} />
       <SizeSelector skus={styles?.[2]['skus']} />
       <AddToBag />
       <Description product={product} />

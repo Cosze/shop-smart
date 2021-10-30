@@ -13,13 +13,16 @@ export const Grid = styled.div`
   margin-top: 0.5em;
   display: grid;
   width: 410px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 `;
 
 export const ImageContainer = styled.div`
-  width: 75px;
-  height: 75px;
+  position: relative;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
   overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
 `;
