@@ -19,7 +19,7 @@ export default function Carousel({ urls, setter }) {
   return (
     <S.Wrapper className='main-image-selector'>
       <S.Container>
-        {getThumbnails(url_list)}
+        {url_list && getThumbnails(url_list)}
       </S.Container>
     </S.Wrapper>
   );
