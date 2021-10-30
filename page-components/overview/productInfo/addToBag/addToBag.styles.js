@@ -11,7 +11,8 @@ export const Button = styled.button`
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
-  padding: 0.7em 6em;
+  padding: 0.7em 0;
+  width: 100%;
   transition: background-color 0.2s ease-in;
 
   &:hover {

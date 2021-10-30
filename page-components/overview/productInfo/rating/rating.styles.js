@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
+  margin-bottom: 0.7em;
 `;
 
 export const RatingContainer = styled.div`
