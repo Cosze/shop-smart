@@ -6,10 +6,10 @@ export default function Overview({ product, styles }) {
   return (
     <S.Main>
       <S.ImageContainer>
-        <ImageGallery />
+        <ImageGallery style={styles[0]} />
       </S.ImageContainer>
       <S.InfoContainer>
-        <ProductInfo product={product} styles={styles}/>
+        <ProductInfo product={product} styles={styles} />
       </S.InfoContainer>
     </S.Main>
   );

@@ -12,7 +12,7 @@ export default function Carousel({ urls, funcs }) {
   const getThumbnails = (collection) => {
     return collection.map((url, index) => (
       <S.ImgWrap onClick={handleClick(url)} key={index} current={url === mainURL}>
-        <Thumbnail url={url}/>
+        <Thumbnail url={url.thumbnail_url}/>
       </S.ImgWrap>
     ));
   };
