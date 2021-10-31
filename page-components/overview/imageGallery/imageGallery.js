@@ -4,13 +4,13 @@ import Carousel from './carousel';
 import Main from './main';
 
 export default function ImageGallery({ style }) {
-  const url_list = style?.photos;
-  const [mainURL, setMainURL] = useState(url_list[0]);
+  const photo_list = style?.photos;
+  const [mainPhoto, setMainPhoto] = useState(photo_list[0]);
 
   return (
     <S.Wrapper className='image-gallery'>
-      <Main url={mainURL} />
-      <Carousel urls={url_list} funcs={{ mainURL, setMainURL }} />
+      <Main photo={mainPhoto} />
+      <Carousel photos={photo_list} funcs={{ mainPhoto, setMainPhoto }} />
     </S.Wrapper>
   );
 }

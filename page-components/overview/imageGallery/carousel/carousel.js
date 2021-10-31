@@ -1,18 +1,17 @@
 import * as S from './carousel.styles';
 import Thumbnail from './thumbnail';
 
-export default function Carousel({ urls, funcs }) {
-  const { mainURL, setMainURL } = funcs;
-  const url_list = urls;
+export default function Carousel({ photos, funcs }) {
+  const { mainPhoto, setMainPhoto } = funcs;
 
-  const handleClick = (url) => {
-    return () => setMainURL(url);
+  const handleClick = (photo) => {
+    return () => setMainPhoto(photo);
   };
 
   const getThumbnails = (collection) => {
-    return collection.map((url, index) => (
-      <S.ImgWrap onClick={handleClick(url)} key={index} current={url === mainURL}>
-        <Thumbnail url={url.thumbnail_url}/>
+    return collection.map((photo, index) => (
+      <S.ImgWrap onClick={handleClick(photo)} key={index} current={photo === mainPhoto}>
+        <Thumbnail url={photo.thumbnail_url}/>
       </S.ImgWrap>
     ));
   };
@@ -20,7 +19,7 @@ export default function Carousel({ urls, funcs }) {
   return (
     <S.Wrapper className='main-image-selector'>
       <S.Container>
-        {url_list && getThumbnails(url_list)}
+        {photos && getThumbnails(photos)}
       </S.Container>
     </S.Wrapper>
   );
