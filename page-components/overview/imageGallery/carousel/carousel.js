@@ -1,18 +1,19 @@
 import * as S from './carousel.styles';
 import Thumbnail from './thumbnail';
 
-export default function Carousel({ urls, setter }) {
+export default function Carousel({ urls, funcs }) {
+  const { mainURL, setMainURL } = funcs;
   const url_list = urls;
 
   const handleClick = (url) => {
-    return () => setter(url);
+    return () => setMainURL(url);
   };
 
   const getThumbnails = (collection) => {
     return collection.map((url, index) => (
-      <div onClick={handleClick(url)} key={index}>
-        <Thumbnail url={url} />
-      </div>
+      <S.ImgWrap onClick={handleClick(url)} key={index} current={url === mainURL}>
+        <Thumbnail url={url}/>
+      </S.ImgWrap>
     ));
   };
 

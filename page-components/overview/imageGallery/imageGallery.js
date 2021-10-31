@@ -10,7 +10,7 @@ export default function ImageGallery() {
   return (
     <S.Wrapper className='image-gallery'>
       <Main url={mainURL} />
-      <Carousel urls={url_list} setter={setMainURL} />
+      <Carousel urls={url_list} funcs={{ mainURL, setMainURL }} />
     </S.Wrapper>
   );
 }
